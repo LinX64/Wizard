@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Currency Cap</string>
+    <string name="search">Search coins or currencies</string>
+    <string name="today_top_movers">Today's Top Movers</string>
+    <string name="top_losers">Top Losers</string>
+    <string name="see_all">See All</string>
+    <string name="top_gainers">Top Gainers</string>
+    <string name="feature_not_available">This feature is not available yet!</string>
+    <string name="feature_not_available_description">We are working hard to bring this feature to you soon. Stay tuned!</string>
+    <string name="delete_your_account_warning">IMPORTANT: This action is irreversible and will delete all your data. Please proceed with caution!</string>
+
+    <string name="exchange_screen_disclaimer">Disclaimer</string>
+    <string name="exchange_screen_disclaimer_description">Exchange rates are indicative and may change according to market fluctuations. Rates provided by CoinCap.io.</string>
+
+    <string name="overview">Overview</string>
+    <string name="markets">Markets</string>
+    <string name="exchange">Exchange</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="news">News</string>
+    <string name="profile">Profile</string>
+    <string name="ai_prediction">AI Prediction</string>
+    <string name="market">Market</string>
+    <string name="explore">Explore</string>
+
+    <!-- Login -->
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot your Password?</string>
+    <string name="logout">Logout</string>
+    <string name="landing">Landing</string>
+    <string name="made_with_love">Made with ❤️ in Poland 🇵🇱</string>
+
+    <string name="fill_profile">Fill Profile</string>
+    <string name="crypto_details">Crypto Details</string>
+    <string name="news_detail">News Detail</string>
+    <string name="settings">Settings</string>
+
+    <string name="search_hint">Search</string>
+    <string name="search_hint_no_results">No results found</string>
+    <string name="try_searching_for">Try searching for something else</string>
+    <string name="no_results_found">No results found</string>
+    <string name="no_internet_connection">No Internet Connection Available!</string>
+    <string name="support_request">Support Request</string>
+    <string name="contact_email">ash.wxrz@hotmail.com</string>
+
+    <string name="filter_by">Filter By</string>
+    <string name="sort_by">Sort By</string>
+    <string name="cancel">Cancel</string>
+    <string name="set">Set</string>
+    <string name="clear">Clear</string>
+    <string name="retry">Retry</string>
+    <string name="ok">OK</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="please_check_internet_connection">Please check your internet connection and try again.</string>
+    <string name="an_error_occurred">An error occurred or we couldn't find any news with the selected dates</string>
+    <string name="read_more">Read More</string>
+
+    <string name="type_to_search">Type to search</string>
+    <string name="source">Source</string>
+
+    <string name="date_of_publication">Date of Publication</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+
+    <string name="please_fill_in_your_full_name">Please fill in your Full Name and Phone number</string>
+    <string name="verify_phone_number">Verify Phone Number</string>
+    <string name="skip">Skip</string>
+    <string name="no_bookmarks_description">Start curating your news. Bookmark articles to see them here.</string>
+    <string name="explore_news">Explore News</string>
+
+    <!-- Profile -->
+    <string name="help_center">Help Center</string>
+    <string name="support">Support</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="delete_your_account">Delete your account</string>
+    <string name="app_version">v1.1.4</string>
+    <string name="copy_right">© 2024 Currency Cap. All rights reserved.</string>
+    <string name="sign_out">Sign Out</string>
+
+    <!-- Landing screen-->
+    <string name="welcome_to_currency_cap">Welcome to CurrencyCap</string>
+    <string name="welcome_to_currency_cap_description">Track your crypto investments with ease</string>
+    <string name="create_account">Create an Account</string>
+    <string name="login">Log in</string>
+    <string name="get_started">Get Started</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!-- Register -->
+    <string name="sign_up">Sign Up</string>
+    <string name="by_signing_up">By signing up, you agree to our </string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="and"> and </string>
+
+    <!-- Reset Password -->
+    <string name="reset_password">Reset Password</string>
+
+    <!-- Get Verified -->
+    <string name="get_verified">Get Verified</string>
+    <string name="enter_verification_code">Enter Verification Code</string>
+    <string name="we_have_sent_code">We have sent you an email with a verification code</string>
+    <string name="finish_sign_up">Finish Sign Up</string>
+
+    <string name="no_bookmarks_yet">No bookmarks yet!</string>
+    <string name="amount_text">Amount</string>
+
+    <!-- content description -->
+    <string name="error">Error</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="back">Back</string>
+    <string name="info">Info</string>
+    <string name="filter">Filter</string>
+    <string name="lock">Lock</string>
+    <string name="crypto_image">Crypto Image</string>
+    <string name="crypto_symbol">Crypto Symbol</string>
+    <string name="refresh">Refresh</string>
+    <string name="expandable">Expandable</string>
+    <string name="change_icon">Change Icon</string>
+    <string name="rate">Rate</string>
+    <string name="check">Check</string>
+    <string name="chevron_right">Chevron Right</string>
+    <string name="news_image">News Image</string>
+    <string name="icon">Icon</string>
+    <string name="person">Person</string>
+    <string name="phone">Phone</string>
+    <string name="logo">Logo</string>
+    <string name="close">Close</string>
+
+    <string name="bitcoin_text">Bitcoin (BTC)</string>
+    <string name="description">Description</string>
+
+    <string name="article_added_to_bookmarks">Article added to bookmarks!</string>
+    <string name="article_removed_from_bookmarks">Article removed from bookmarks!</string>
+
+    <string name="no_chart_data_available">No chart data available!</string>
+    <string name="powered_by">Powered by</string>
+    <string name="chart_data_by_coincap">Chart data provided by CoinCap.io</string>
+
+    <string name="last_update_text">Last update: %1$s</string>
+</resources>
