@@ -1,6 +1,5 @@
 import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.KotlinMultiplatform
-import org.jetbrains.compose.ExperimentalComposeLibrary
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSetTree
 
 plugins {
@@ -41,17 +40,12 @@ kotlin {
             implementation(libs.kotlinx.datetime)
         }
 
-        commonTest.dependencies {
-            implementation(kotlin("test"))
-            @OptIn(ExperimentalComposeLibrary::class)
-            implementation(compose.uiTest)
-        }
-
         androidMain.dependencies {
             implementation(compose.uiTooling)
             implementation(libs.androidx.activityCompose)
         }
 
+        iosMain.dependencies {}
     }
 }
 
@@ -80,16 +74,16 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "io.github.linx64"
-            artifactId = "chartcmp"
+            artifactId = "cmpwizard"
             version = System.getenv("RELEASE_VERSION")
             artifact("build/outputs/aar/${artifactId}-release.aar")
         }
 
         repositories {
             maven {
-                name = "chartcmpnew"
+                name = "cmpwizard"
                 description = "A chart library for Compose Multiplatform"
-                url = uri("https://maven.pkg.github.com/LinX64/CMP-Chart")
+                url = uri("https://maven.pkg.github.com/LinX64/Wizard")
 
                 credentials {
                     username = project.findProperty("mavenCentralUsername") as String?
@@ -109,3 +103,6 @@ mavenPublishing {
     )
 }
 
+//tasks.named("signReleasePublication") {
+//    dependsOn(":cmpwizard:bundleReleaseAar")
+//}

@@ -1,22 +1,30 @@
-# Compose Multiplatform Application
+<p align="center">
+  <a href="https://central.sonatype.com/artifact/io.github.linx64/cmpwizard/overview">
+    <img src="https://img.shields.io/maven-central/v/io.github.linx64/cmpwizard.svg?label=Maven%20Central&logo=android&style=flat-square" alt="Maven Central">
+  </a>
+</p>
 
-## Before running!
- - check your system with [KDoctor](https://github.com/Kotlin/kdoctor)
- - install JDK 17 or higher on your machine
- - add `local.properties` file to the project root and set a path to Android SDK there
+# 🚀📘 Compose Multiplatform Library
 
-### Android
-To run the application on android device/emulator:  
- - open project in Android Studio and run imported android run configuration
+This is a multiplatform library that provides a set of beautiful charts for your application.
 
-To build the application bundle:
- - run `./gradlew :composeApp:assembleDebug`
- - find `.apk` file in `composeApp/build/outputs/apk/debug/composeApp-debug.apk`
-Run android UI tests on the connected device: `./gradlew :composeApp:connectedDebugAndroidTest`
+## Features
 
-### iOS
-To run the application on iPhone device/simulator:
- - Open `iosApp/iosApp.xcproject` in Xcode and run standard configuration
- - Or use [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio
-Run iOS simulator UI tests: `./gradlew :composeApp:iosSimulatorArm64Test`
+- Line Chart
+- Bar Chart
+- Pie Chart
 
+## Installation
+
+```kotlin
+dependencies {
+    implementation("io.github.linx64:cmpwizard:1.0.0")
+}
+```
+
+### Version Catalog
+
+```kotlin
+cmpwizard = "1.0.0"
+cmpwizard = { module = "io.github.linx64:cmpwizard", version.ref = "cmpwizard" }
+```

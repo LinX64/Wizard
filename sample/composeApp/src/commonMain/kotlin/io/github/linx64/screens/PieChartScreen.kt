@@ -9,8 +9,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import io.github.linx64.piechart.BasePieChart
-import io.github.linx64.piechart.PieSlice
+import io.github.linx64.cmpwizard.piechart.BasePieChart
+import io.github.linx64.cmpwizard.piechart.PieSlice
 
 @Composable
 fun PieChartRoute(modifier: Modifier = Modifier) {

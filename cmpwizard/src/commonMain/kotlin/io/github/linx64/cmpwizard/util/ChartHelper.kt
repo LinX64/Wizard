@@ -1,4 +1,4 @@
-package io.github.linx64.util
+package io.github.linx64.cmpwizard.util
 
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
@@ -17,8 +17,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.github.linx64.linechart.ChartDataPoint
-import io.github.linx64.ui.common.formatToPrice
+import io.github.linx64.cmpwizard.linechart.ChartDataPoint
+import io.github.linx64.cmpwizard.ui.common.formatToPrice
 import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime

@@ -2,7 +2,7 @@
 
 kotlin = "2.0.20"
 compose = "1.7.0-beta01"
-agp = "8.6.0"
+agp = "8.5.2"
 androidx-activityCompose = "1.9.2"
 androidx-uiTest = "1.7.0"
 kotlinxCollectionsImmutable = "0.3.8"
@@ -11,6 +11,7 @@ navigationCompose = "2.8.0-alpha09"
 kotlinx-serialization = "1.7.2"
 mavenPublish = "0.29.0"
 navigationComposeVersion = "2.8.0"
+cmpwizard = "1.0.0"
 
 [libraries]
 
@@ -22,6 +23,7 @@ kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationComposeVersion" }
+cmpwizard = { module = "io.github.linx64:cmpwizard", version.ref = "cmpwizard" }
 
 [plugins]
 

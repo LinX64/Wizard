@@ -1,4 +1,4 @@
-package io.github.linx64.piechart
+package io.github.linx64.cmpwizard.piechart
 
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.Color

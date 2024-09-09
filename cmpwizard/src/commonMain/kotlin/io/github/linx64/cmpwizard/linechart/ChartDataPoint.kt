@@ -1,4 +1,4 @@
-package io.github.linx64.linechart
+package io.github.linx64.cmpwizard.linechart
 
 import androidx.compose.runtime.Stable
 

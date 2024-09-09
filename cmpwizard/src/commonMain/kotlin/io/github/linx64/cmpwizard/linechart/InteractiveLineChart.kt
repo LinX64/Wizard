@@ -1,4 +1,4 @@
-package io.github.linx64.linechart
+package io.github.linx64.cmpwizard.linechart
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -27,25 +27,25 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.github.linx64.ui.common.formatToPrice
-import io.github.linx64.util.ChartHelper.drawChartLine
-import io.github.linx64.util.ChartHelper.drawHighestPoint
-import io.github.linx64.util.ChartHelper.drawMinMaxLabels
-import io.github.linx64.util.ChartHelper.drawSelectedPointLine
-import io.github.linx64.util.ChartHelper.formatTimestamp
-import io.github.linx64.util.ChartState
+import io.github.linx64.cmpwizard.ui.common.formatToPrice
+import io.github.linx64.cmpwizard.util.ChartHelper.drawChartLine
+import io.github.linx64.cmpwizard.util.ChartHelper.drawHighestPoint
+import io.github.linx64.cmpwizard.util.ChartHelper.drawMinMaxLabels
+import io.github.linx64.cmpwizard.util.ChartHelper.drawSelectedPointLine
+import io.github.linx64.cmpwizard.util.ChartHelper.formatTimestamp
+import io.github.linx64.cmpwizard.util.ChartState
 import kotlinx.coroutines.delay
 
 @Composable
-public fun BaseLineChart(
+public fun InteractiveLineChart(
     modifier: Modifier = Modifier,
     chartData: Set<ChartDataPoint>?,
+    isInteractivityEnabled: Boolean = true,
     isLoading: Boolean = false,
     height: Dp = 200.dp,
     lighterColor: Color = MaterialTheme.colorScheme.surface,
     lightLineColor: Color = MaterialTheme.colorScheme.primary,
     labelColor: Color = MaterialTheme.colorScheme.onSurface,
-    isInteractivityEnabled: Boolean = true,
     labelBackgroundColor: Color = MaterialTheme.colorScheme.surface.copy(alpha = 0.5f),
     textMeasurer: TextMeasurer = rememberTextMeasurer(),
     emptyStateMessage: String = "No chart data available!"

@@ -6,7 +6,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import io.github.linx64.linechart.ChartDataPoint
+import io.github.linx64.cmpwizard.linechart.ChartDataPoint
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.ExperimentalResourceApi

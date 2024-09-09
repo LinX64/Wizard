@@ -1,11 +1,14 @@
-package io.github.linx64.linechart
+package io.github.linx64.cmpwizard.linechart
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -20,25 +23,29 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.TextMeasurer
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.github.linx64.util.ChartHelper.drawHighestPoint
-import io.github.linx64.util.ChartHelper.drawMinMaxLabels
-import io.github.linx64.util.ChartHelper.drawNormalChartLine
-import io.github.linx64.util.ChartState
+import io.github.linx64.cmpwizard.ui.common.formatToPrice
+import io.github.linx64.cmpwizard.util.ChartHelper.drawChartLine
+import io.github.linx64.cmpwizard.util.ChartHelper.drawHighestPoint
+import io.github.linx64.cmpwizard.util.ChartHelper.drawMinMaxLabels
+import io.github.linx64.cmpwizard.util.ChartHelper.drawSelectedPointLine
+import io.github.linx64.cmpwizard.util.ChartHelper.formatTimestamp
+import io.github.linx64.cmpwizard.util.ChartState
 import kotlinx.coroutines.delay
 
 @Composable
-public fun NormalLineChart(
+public fun BaseLineChart(
     modifier: Modifier = Modifier,
     chartData: Set<ChartDataPoint>?,
-    isInteractivityEnabled: Boolean = true,
     isLoading: Boolean = false,
     height: Dp = 200.dp,
     lighterColor: Color = MaterialTheme.colorScheme.surface,
-    lineColor: Color = MaterialTheme.colorScheme.primary,
+    lightLineColor: Color = MaterialTheme.colorScheme.primary,
     labelColor: Color = MaterialTheme.colorScheme.onSurface,
+    isInteractivityEnabled: Boolean = true,
     labelBackgroundColor: Color = MaterialTheme.colorScheme.surface.copy(alpha = 0.5f),
     textMeasurer: TextMeasurer = rememberTextMeasurer(),
     emptyStateMessage: String = "No chart data available!"
@@ -71,7 +78,8 @@ public fun NormalLineChart(
                     modifier = Modifier.align(Alignment.Center).height(height),
                     chartData = chartData.toList(),
                     isInteractivityEnabled = isInteractivityEnabled,
-                    lightLineColor = lineColor,
+                    lighterColor = lighterColor,
+                    lightLineColor = lightLineColor,
                     labelColor = labelColor,
                     labelBackgroundColor = labelBackgroundColor,
                     textMeasurer = textMeasurer,
@@ -97,11 +105,13 @@ private fun DrawChart(
     modifier: Modifier = Modifier,
     chartData: List<ChartDataPoint>,
     isInteractivityEnabled: Boolean,
+    lighterColor: Color,
     lightLineColor: Color,
     labelColor: Color,
     labelBackgroundColor: Color,
     textMeasurer: TextMeasurer,
-    highestPointColor: Color = MaterialTheme.colorScheme.primary
+    highestPointColor: Color = MaterialTheme.colorScheme.primary,
+    dashedLineColor: Color = MaterialTheme.colorScheme.onSurface
 ) {
     val chartState = rememberChartState(chartData)
 
@@ -122,11 +132,7 @@ private fun DrawChart(
                 }
             }
     ) {
-        drawNormalChartLine(
-            chartState = chartState,
-            size = size,
-            lineColor = lightLineColor
-        )
+        drawChartLine(chartState, size, lighterColor, lightLineColor)
 
         if (isInteractivityEnabled) {
             drawHighestPoint(
@@ -135,7 +141,11 @@ private fun DrawChart(
                 chartState = chartState,
                 size = size
             )
-
+            drawSelectedPointLine(
+                chartState = chartState,
+                dashedLineColor = dashedLineColor,
+                size = size
+            )
             drawMinMaxLabels(
                 labelColor = labelColor,
                 labelBackgroundColor = labelBackgroundColor,
@@ -146,9 +156,35 @@ private fun DrawChart(
             )
         }
     }
+
+    if (isInteractivityEnabled && chartState.isInteracting) {
+        SelectedDataPointOverlay(chartData[chartState.selectedIndex])
+    }
 }
 
 @Composable
 private fun rememberChartState(chartData: List<ChartDataPoint>): ChartState = remember(chartData) {
     ChartState(chartData)
+}
+
+@Composable
+private fun SelectedDataPointOverlay(dataPoint: ChartDataPoint) {
+    Column(
+        modifier = Modifier
+            .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.4f))
+            .padding(8.dp)
+    ) {
+        Text(
+            text = "Price: $${formatToPrice(dataPoint.price.toDouble())}",
+            color = MaterialTheme.colorScheme.onSurface,
+            fontWeight = FontWeight.Bold,
+            style = MaterialTheme.typography.bodyMedium
+        )
+        Text(
+            text = "Time: ${formatTimestamp(dataPoint.timestamp)}",
+            color = MaterialTheme.colorScheme.onSurface,
+            fontWeight = FontWeight.Bold,
+            style = MaterialTheme.typography.bodyMedium
+        )
+    }
 }

@@ -1,9 +1,9 @@
-package io.github.linx64.util
+package io.github.linx64.cmpwizard.util
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import io.github.linx64.linechart.ChartDataPoint
+import io.github.linx64.cmpwizard.linechart.ChartDataPoint
 import kotlin.math.roundToInt
 
 class ChartState(chartData: List<ChartDataPoint>) {

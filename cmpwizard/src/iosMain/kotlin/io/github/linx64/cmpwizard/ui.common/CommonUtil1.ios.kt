@@ -1,4 +1,4 @@
-package io.github.linx64.ui.common
+package io.github.linx64.cmpwizard.ui.common
 
 import platform.Foundation.NSNumber
 import platform.Foundation.NSNumberFormatter
