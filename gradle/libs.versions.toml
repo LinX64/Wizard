@@ -2,7 +2,7 @@
 
 kotlin = "2.0.20"
 compose = "1.7.0-beta01"
-agp = "8.5.2"
+agp = "8.6.0"
 androidx-activityCompose = "1.9.2"
 androidx-uiTest = "1.7.0"
 kotlinxCollectionsImmutable = "0.3.8"
