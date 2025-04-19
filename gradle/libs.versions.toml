@@ -1,20 +1,19 @@
 [versions]
 
 kotlin = "2.1.20"
-compose = "1.7.0-beta01"
-agp = "8.5.2"
+compose = "1.7.0-rc01"
+agp = "8.9.1"
 androidx-activityCompose = "1.10.1"
-androidx-uiTest = "1.7.0"
+androidx-uiTest = "1.7.8"
 kotlinxCollectionsImmutable = "0.3.8"
 kotlinxDatetime = "0.6.1"
-navigationCompose = "2.8.0-alpha09"
-kotlinx-serialization = "1.7.2"
+navigationCompose = "2.8.0-alpha11"
+kotlinx-serialization = "1.8.0"
 mavenPublish = "0.31.0"
-navigationComposeVersion = "2.8.0"
+navigationComposeVersion = "2.8.9"
 cmpwizard = "1.0.0"
 
 [libraries]
-
 androidx-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-uitest-testManifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "androidx-uiTest" }
 androidx-uitest-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "androidx-uiTest" }
