@@ -10,7 +10,7 @@ kotlinxDatetime = "0.6.2"
 navigationCompose = "2.8.0-alpha13"
 kotlinx-serialization = "1.8.1"
 mavenPublish = "0.31.0"
-navigationComposeVersion = "2.8.9"
+navigationComposeVersion = "2.9.5"
 cmpwizard = "1.0.0"
 
 [libraries]
